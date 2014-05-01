@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Geographic Aggregations Map</title> 
+		<script src="/sap/ui5/1/resources/jquery-1.7.1.js" type="text/javascript"></script>
+		
+		<script src="/sap/ui5/1/resources/sap-ui-core-all.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons,sap.viz,sap.ui.ux3,sap.ui.table"
+				data-sap-ui-theme="sap_goldreflection"
+				data-sap-ui-language="es">
+ 		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+<script src="/mexbalia/Geo_Agg/UI/src/wicket.js" type="text/javascript"></script>
+<script src="/mexbalia/Geo_Agg/UI/src/wicket-gmap3.js" type="text/javascript"></script>
+		
+		
+		<!-- Codigo googlemaps -->
+		    <style>
+      html, body{
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 40px;
+        right: 5px;;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+       #panel_info {
+        position: absolute;
+        top: 150px;
+        right: 5px;;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        width:30%
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+    <script src="/mexbalia/Geo_Agg/UI/src/map_init.js">    </script>
+    <script src="/mexbalia/Geo_Agg/UI/src/ui5_components.js">    </script>
+		
+		
+		
+
+	</head>
+	
+	
+	
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+			
+			
+			
+			<div id="panel">
+      			<button onclick="cleanMap()">Clean map</button>
+      			<button onclick="dfArea()">DF Area </button>
+      			<!-- 
+      			<button onclick="changeRadius()">Change radius</button>
+      			<button onclick="changeOpacity()">Change opacity</button>
+      			-->
+    		</div>
+    		<div id="panel_info">
+    		</div>
+    		
+    		
+    		<div id="map-canvas"></div>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+table.schemaName = "GEO_AGG";
+table.tableType = COLUMNSTORE;
+table.columns = [{name="ID";sqlType=INTEGER;nullable = false;},
+{name="CATEGORY";sqlType=SHORTTEXT;nullable = false;length=100;}, 
+{name="DESCRIPTION";sqlType=SHORTTEXT;nullable = false;length=250;}];
+
+table.primaryKey.pkcolumns=["ID"];

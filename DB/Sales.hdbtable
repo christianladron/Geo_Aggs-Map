@@ -1,0 +1,11 @@
+table.schemaName = "GEO_AGG";
+table.tableType = COLUMNSTORE;
+table.columns = [{name="ID";sqlType=INTEGER;nullable = false;},
+{name="STORE";sqlType=INTEGER;nullable = false;}, 
+{name="CATEGORY";sqlType=INTEGER;nullable = false;},
+{name="VOLUME";sqlType=DOUBLE;nullable = false;},
+{name="UNITS";sqlType=BIGINT;nullable = false;},
+{name="PROMOS";sqlType=DOUBLE;nullable = false;},
+{name="PREDICTION";sqlType=DOUBLE;nullable = false;}];
+//table.indexes=[{name="IndexSales";indexColumns = ["STORE","CATEGORY","ID"];}];
+table.primaryKey.pkcolumns=["STORE","CATEGORY","ID"];
