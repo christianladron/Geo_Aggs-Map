@@ -1,0 +1,6 @@
+host = "127.0.0.1";
+port = 8001; 
+pathPrefix = "/mexbalia/Geo_Agg/UI/Conf.json";
+authType = none;
+useSSL = false;
+timeout = 30000;

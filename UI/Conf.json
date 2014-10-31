@@ -1,0 +1,13 @@
+{"Nodes":
+        {"Table":"\"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Geo_Nodes\"",
+        "GField":"location"},
+ "Aggregations":
+ 		{"Table":"\"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Aggregations\"",
+ 		"Columns":[
+ 			{"Name":"VOLUME","Alias":"Volume"},
+ 			{"Name":"UNITS","Alias":"Units"},
+ 			{"Name":"PROMOS","Alias":"Promos"},
+ 			{"Name":"PREDICTION","Alias":"Prediction"}],
+ 		"GeoColumn":"Node",
+ 		"CategoryColumn":"Category"}
+ }

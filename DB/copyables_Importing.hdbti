@@ -1,0 +1,9 @@
+import=[
+{
+table = "mexbalia.Geo_Agg.DB::Nodes";
+schema = "GEO_AGG";
+file = "mexbalia.Geo_Agg.DB:Stores.csv";
+header = false;
+delimField = ",";
+}
+];

@@ -1,0 +1,10 @@
+schema="GEO_AGG";
+query="select \"NODE\",\
+\"CATEGORY\", \
+sum(\"VOLUME\") AS \"VOLUME\",\
+sum(\"UNITS\") AS \"UNITS\",\
+sum(\"PROMOS\") AS \"PROMOS\",\
+sum(\"PREDICTION\") AS \"PREDICTION\"\
+ from \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Sales\" GROUP BY \"NODE\",\"CATEGORY\" ORDER BY \"NODE\" ASC";
+
+
