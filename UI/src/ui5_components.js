@@ -74,6 +74,10 @@ var Tabla_Stores = new sap.ui.table.Table({title:"Points of interest",
 	
 	//CHECKBOXES
 	
+	
+	
+	//CHECKBOXES
+	
 		var oVLayout = new sap.ui.commons.layout.VerticalLayout("hLayout1",{width:'100%',height:'100%'});
 
 		var oParentCheckBox = new sap.ui.commons.TriStateCheckBox("pcb1", {text: "select / deselect all",selectionState:sap.ui.commons.TriStateCheckBoxState.Checked });
