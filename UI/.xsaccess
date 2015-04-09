@@ -1,6 +1,6 @@
 { "exposed" : true, "authentication" : null,"anonymous_connection":"mexbalia.Geo_Agg.UI::Anonymous_Access", "rewrite_rules" : 
  [{ 
  "source" : "/mapa", 
- "target" : "/index.html" 
+ "target" : "/index.html"  
  }] 
 }

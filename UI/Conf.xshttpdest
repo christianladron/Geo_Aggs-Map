@@ -1,5 +1,5 @@
 host = "127.0.0.1";
-port = 8001; 
+port = 8000; 
 pathPrefix = "/mexbalia/Geo_Agg/UI/Conf.json";
 authType = none;
 useSSL = false;

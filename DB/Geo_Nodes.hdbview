@@ -1,4 +1,4 @@
 schema="GEO_AGG";
 query="SELECT *, NEW ST_POINT(Latitude,Longitude) AS Location, NEW ST_POINT(Latitude,Longitude).ST_AsWKT() AS Location_txt FROM \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Nodes\"";
-
+ 
 

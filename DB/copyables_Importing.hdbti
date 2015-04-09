@@ -5,5 +5,12 @@ schema = "GEO_AGG";
 file = "mexbalia.Geo_Agg.DB:Stores.csv";
 header = false;
 delimField = ",";
+},
+{
+table = "mexbalia.Geo_Agg.DB::Stores";
+schema = "GEO_AGG";
+file = "mexbalia.Geo_Agg.DB:Stores.csv";
+header = false;
+delimField = ",";
 }
 ];

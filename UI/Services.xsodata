@@ -1,5 +1,5 @@
 service {
 
-        "GEO_AGG"."mexbalia.Geo_Agg.DB::Categories" as "categories";
+        "GEO_AGG"."mexbalia.Geo_Agg.DB::Categories" as "categories"; 
  
  }

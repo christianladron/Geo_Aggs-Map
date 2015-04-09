@@ -7,7 +7,7 @@ if(/^[0-9,()]+$/.test(categories)){
 	
 	
 	var Confdestination_package = "mexbalia.Geo_Agg.UI";
-	var Confdestination_name = "Conf";
+	var Confdestination_name = "Conf"; 
 
 	       var Confdest = $.net.http.readDestination(Confdestination_package, Confdestination_name);
 	       var Confclient = new $.net.http.Client();

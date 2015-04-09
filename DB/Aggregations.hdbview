@@ -1,4 +1,4 @@
-schema="GEO_AGG";
+schema="GEO_AGG"; 
 query="select \"NODE\",\
 \"CATEGORY\", \
 sum(\"VOLUME\") AS \"VOLUME\",\

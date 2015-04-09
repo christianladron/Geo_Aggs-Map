@@ -4,28 +4,28 @@ if (categories=='()'){categories = '(0)';}
 if(/^[0-9,()]+$/.test(categories)){
 	
 	var connection = $.db.getConnection("mexbalia.Geo_Agg.UI::Anonymous_Access");
-	var GetStores = connection.prepareStatement( "SELECT * FROM \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Geo_Stores\" WHERE NEW ST_Polygon(?) .ST_Contains( location )=1" );
+	var GetNODEs = connection.prepareStatement( "SELECT * FROM \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Geo_Nodes\" WHERE NEW ST_Polygon(?) .ST_Contains( location )=1" );
 	
-	GetStores.setString(1,polygon);
+	GetNODEs.setString(1,polygon);
 	
-	var ResultRow =GetStores.executeQuery();
+	var ResultRow =GetNODEs.executeQuery();
 	
-	var StoresResponse=[];
+	var NODEsResponse=[];
 	
 	var current_object={};
-	var StoresList = [];
+	var NODEsList = [];
 	while(ResultRow.next()){
-		var StoreID = ResultRow.getString(1);
-	current_object={"ID":StoreID,"STATE":ResultRow.getString(2),"LOCATION":ResultRow.getString(6)};
-	StoresList.push(StoreID);
-	StoresResponse.push(current_object);
+		var NODEID = ResultRow.getString(1);
+	current_object={"ID":NODEID,"STATE":ResultRow.getString(2),"LOCATION":ResultRow.getString(6)};
+	NODEsList.push(NODEID);
+	NODEsResponse.push(current_object);
 	}
-	var StoresList_str = '('+StoresList.toString()+')';
-	if (StoresList.length == 0){StoresList_str='(0)';}
+	var NODEsList_str = '('+NODEsList.toString()+')';
+	if (NODEsList.length == 0){NODEsList_str='(0)';}
 	var AggregationsResponse=[];
 	
 	var GetAggregations=connection.prepareStatement("select sum(Sales.volume) as volume,sum(TO_BIGINT(Sales.units)) as units,sum(Sales.promos) as promos,sum(Sales.prediction) as prediction "+
-			"from \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Aggregations\" as Sales where Sales.store in "+StoresList_str+" and Sales.category in "+categories);
+			"from \"GEO_AGG\".\"mexbalia.Geo_Agg.DB::Aggregations\" as Sales where Sales.NODE in "+NODEsList_str+" and Sales.category in "+categories);
 	
 	
 	
@@ -38,12 +38,12 @@ if(/^[0-9,()]+$/.test(categories)){
 	
 	AggregationsResponse.push(current_object);
 	}
-	var respuesta = {map:StoresResponse,table:AggregationsResponse};
+	var respuesta = {map:NODEsResponse,table:AggregationsResponse};
 	
 	$.response.setBody(JSON.stringify(respuesta));
 	
 	ResultRow.close();
-	GetStores.close();
+	GetNODEs.close();
 	connection.close();
 
 }

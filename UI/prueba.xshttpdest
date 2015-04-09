@@ -1,0 +1,7 @@
+description = "conf file";  
+host = "localhost";  
+port = 8001;  
+useProxy = false;  
+authType = none;  
+useSSL = false;  
+timeout = 1000; 

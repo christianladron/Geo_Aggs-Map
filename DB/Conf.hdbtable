@@ -1,0 +1,6 @@
+table.schemaName = "GEO_AGG";
+table.tableType = COLUMNSTORE;
+table.columns = [
+{name="ID";sqlType=VARCHAR;nullable = false;length=300;}, 
+{name="CONF";sqlType=VARCHAR;nullable = false;length=1300;} ];
+table.primaryKey.pkcolumns=["ID"];
