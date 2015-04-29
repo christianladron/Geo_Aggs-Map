@@ -1,4 +1,8 @@
 # README Geographic Aggregations map
+##Installation
+Copy the repository content to a roject called Geo_Agg inside a package called mexbalia in the root package of Hana and activate it, or change all the routes in the html files and the Anonymous_Access.xssqlcc.
+
+You need the sap.hana.xs.admin.roles::SQLCCAdministrator role to enable anonymous access, if you can't get that role or don't want anonymous acces, remove the anonymous configuration from .xsaccess.
 
    Copyright 2014 Christian Ladrón de Guevara Reyes
 
